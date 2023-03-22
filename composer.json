@@ -11,5 +11,9 @@
             "email": "ostritsova@mail.ru"
         }
     ],
-    "require": {}
+    "require": {},
+
+    "bin": [
+  "    bin/brain-games"
+    ]
 }
