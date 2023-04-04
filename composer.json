@@ -6,7 +6,8 @@
         },
             
         "files":[
-            "src/Cli.php"            
+            "src/Cli.php",
+            "src/LogicEven.php"            
         ]        
     },
     "bin": [
@@ -19,6 +20,8 @@
             "email": "ostritsova@mail.ru"
         }
     ],
+    "description": "hexlet php-package",
+    "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.17"
     },
