@@ -41,7 +41,7 @@ function runCalc()
         } elseif ($operator == '*') {
             $correctAnswer = $num1 * $num2 ;
         }
-        line("Question: %s %s %s", $num1, $operator, $num2 );
+        line("Question: %s %s %s", $num1, $operator, $num2);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $correctAnswer);
@@ -53,5 +53,3 @@ function runCalc()
     }
     line("Congratulations, %s!", $name);
 }
-
-

@@ -40,4 +40,3 @@ function runEven()
     }
     line("Congratulations, %s!", $name);
 }
-
