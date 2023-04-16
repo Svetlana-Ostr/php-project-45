@@ -7,12 +7,14 @@
             
         "files":[
             "src/Cli.php",
-            "src/LogicEven.php"            
+            "src/Games/LogicEven.php",  
+            "src/Games/LogicCalc.php"           
         ]        
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "authors": [
         {
