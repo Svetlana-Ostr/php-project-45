@@ -9,14 +9,16 @@
             "src/Cli.php",
             "src/Games/LogicEven.php",  
             "src/Games/LogicCalc.php",
-            "src/Games/LogicGcd.php"           
+            "src/Games/LogicGcd.php",
+            "src/Games/LogicProgression.php"           
         ]        
     },
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "authors": [
         {
