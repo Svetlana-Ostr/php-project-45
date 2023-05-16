@@ -6,7 +6,6 @@ use function cli\line;
 use function cli\prompt;
 
 function gcd($num1, $num2)
-
 {
     while ($num1 != 0 && $num2 != 0) {
         if ($num1 > $num2) {
@@ -25,7 +24,7 @@ function runGcd()
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line('What is the result of the expression?');    
+    line('What is the result of the expression?');
 
     //Вопрос-ответ
     $correctAnswer = 0 ;
@@ -49,4 +48,4 @@ function runGcd()
         $i++;
     }
     line("Congratulations, %s!", $name);
-    }
+}
