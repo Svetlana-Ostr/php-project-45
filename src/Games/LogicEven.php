@@ -32,7 +32,7 @@ function runEven()
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $correctAnswer);
-            line("Let's try again, %s", $name);
+            line("Let's try again, %s!", $name);
             break;
         }
         line("Correct!");
