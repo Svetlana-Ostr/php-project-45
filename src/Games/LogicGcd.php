@@ -40,8 +40,8 @@ function runGcd()
         line("Question: %s  %s", $num1, $num2);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $correctAnswer);
-            line("Let's try again, %s", $name);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s!", $playerAnswer, $correctAnswer, $name);
+            //line("Let's try again, %s", $name);
             break;
         }
         line("Correct!");
