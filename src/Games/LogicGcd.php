@@ -32,10 +32,10 @@ function runGcd()
     $stepToVin = 3 ;
 
     while ($i <= $stepToVin) {
-        $num1 = random_int(0, 100) ;
-        $num2 = random_int(0, 100) ;
-        $num1 = $num1 ;
-        $num2 = $num2 ;
+        $number1 = random_int(0, 100) ;
+        $number2 = random_int(0, 100) ;
+        $num1 = $number1 ;
+        $num2 = $number2 ;
         $correctAnswer = gcd($num1, $num2) ;
         line("Question: %s  %s", $num1, $num2);
         $playerAnswer = prompt('Your answer');
