@@ -31,7 +31,7 @@ function runEven()
         line('Question: %s', $question);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s", $playerAnswer, $correctAnswer, $name );
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s!", $playerAnswer, $correctAnswer, $name );
             break;
         }
         line("Correct!");
