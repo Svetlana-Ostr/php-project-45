@@ -31,8 +31,7 @@ function runEven()
         line('Question: %s', $question);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $correctAnswer);
-            line("Let's try again, %s!", $name);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s", $playerAnswer, $correctAnswer, $name );
             break;
         }
         line("Correct!");
@@ -40,3 +39,10 @@ function runEven()
     }
     line("Congratulations, %s!", $name);
 }
+
+
+//line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s", $playerAnswer, $correctAnswer, $name );
+//line("Let's try again, %s", $name);
+
+//line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $correctAnswer);
+            //line("Let's try again, %s", $name);
