@@ -51,7 +51,10 @@ function runProgression()
             echo "Let's try again, {$name}!" . PHP_EOL ;
             break;
         }
-        line("Correct!" . PHP_EOL . "Congratulations, %s!", $name);
+        line("Correct!");
         $j++;
+        if ($i > $stepToVin ) {
+            line("Congratulations, %s!", $name) ;
+        }
     }
 }

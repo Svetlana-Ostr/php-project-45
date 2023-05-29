@@ -48,7 +48,10 @@ function runCalc()
             echo "Let's try again, {$name}!" . PHP_EOL ;
             break;
         }
-        line("Correct!" . PHP_EOL . "Congratulations, %s!", $name);
+        line("Correct!");
         $i++;
+        if ($i > $stepToVin ) {
+            line("Congratulations, %s!", $name) ;
+        }
     }
 }

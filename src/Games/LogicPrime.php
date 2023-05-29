@@ -35,7 +35,7 @@ function runPrime()
     $stepToVin = 3;
 
     while ($i <= $stepToVin) {
-        $question = random_int(0, 100);
+        $question = random_int(1, 100);
         isPrime($question) ? $correctAnswer = 'yes' : $correctAnswer = 'no';
         line('Question: %s', $question);
         $playerAnswer = prompt('Your answer');
@@ -44,7 +44,10 @@ function runPrime()
             echo "Let's try again, {$name}!" . PHP_EOL ;
             break;
         }
-        line("Correct!" . PHP_EOL . "Congratulations, %s!", $name);
+        line("Correct!");
         $i++;
+        if ($i > $stepToVin ) {
+            line("Congratulations, %s!", $name) ; 
+        }
     }
 }
