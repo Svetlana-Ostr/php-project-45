@@ -44,12 +44,11 @@ function runCalc()
         line("Question: %s %s %s", $num1, $operator, $num2);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s!", $playerAnswer, $correctAnswer, $name);
-            //line("Let's try again, %s", $name);
+            echo "{$playerAnswer} is wrong answer ;(. Correct answer was '{$correctAnswer}'" . PHP_EOL ;
+            echo "Let's try again, {$name}!" . PHP_EOL ;
             break;
         }
-        line("Correct!");
+        line("Correct!" . PHP_EOL . "Congratulations, %s!", $name);
         $i++;
     }
-    line("Congratulations, %s!", $name);
 }

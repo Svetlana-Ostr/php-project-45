@@ -24,7 +24,7 @@ function runGcd()
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line('Find the greatest common divisor of given numbers.');
+    line('Find the greatest common divisor of given numbers.') ;
 
     //Вопрос-ответ
     $correctAnswer = 0 ;
@@ -37,16 +37,15 @@ function runGcd()
         $num1 = $number1 ;
         $num2 = $number2 ;
         $correctAnswer = gcd($num1, $num2) ;
-        echo "Question: {$num1} {$num2}".PHP_EOL ;
+        echo "Question: {$num1} {$num2}" . PHP_EOL ;
         //line("Question: %s  %s", $num1, $num2);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s!", $playerAnswer, $correctAnswer, $name);
-            //line("Let's try again, %s", $name);
+            echo "{$playerAnswer} is wrong answer ;(. Correct answer was '{$correctAnswer}'" . PHP_EOL ;
+            echo "Let's try again, {$name}!" . PHP_EOL ;
             break;
         }
-        line("Correct!".PHP_EOL."Congratulations, %s!", $name);
+        line("Correct!" . PHP_EOL . "Congratulations, %s!", $name) ;
         $i++;
     }
-   // line("Congratulations, %s!", $name);
-} 
+}
