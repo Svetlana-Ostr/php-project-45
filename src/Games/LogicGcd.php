@@ -45,8 +45,8 @@ function runGcd()
             //line("Let's try again, %s", $name);
             break;
         }
-        line("Correct!");
+        line("Correct!".PHP_EOL."Congratulations, %s!", $name);
         $i++;
     }
-    line("Congratulations, %s!", $name);
+   // line("Congratulations, %s!", $name);
 } 
