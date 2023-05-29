@@ -53,7 +53,7 @@ function runProgression()
         }
         line("Correct!");
         $j++;
-        if ($i > $stepToVin ) {
+        if ($i > $stepToVin) {
             line("Congratulations, %s!", $name) ;
         }
     }

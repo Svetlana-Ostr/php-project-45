@@ -50,7 +50,7 @@ function runCalc()
         }
         line("Correct!");
         $i++;
-        if ($i > $stepToVin ) {
+        if ($i > $stepToVin) {
             line("Congratulations, %s!", $name) ;
         }
     }
