@@ -37,7 +37,8 @@ function runGcd()
         $num1 = $number1 ;
         $num2 = $number2 ;
         $correctAnswer = gcd($num1, $num2) ;
-        line("Question: %s  %s", $num1, $num2);
+        echo "Question: {$num1} {$num2}".PHP_EOL ;
+        //line("Question: %s  %s", $num1, $num2);
         $playerAnswer = prompt('Your answer');
         if ($playerAnswer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.".PHP_EOL."Let's try again, %s!", $playerAnswer, $correctAnswer, $name);
@@ -48,4 +49,4 @@ function runGcd()
         $i++;
     }
     line("Congratulations, %s!", $name);
-}
+} 
