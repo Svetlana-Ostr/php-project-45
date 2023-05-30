@@ -5,7 +5,7 @@ namespace BrainGames\Games\LogicGcd;
 use function cli\line;
 use function cli\prompt;
 
-function gcd(int $num1, int $num2) : int
+function gcd(int $num1, int $num2): int
 {
     while ($num1 != 0 && $num2 != 0) {
         if ($num1 > $num2) {

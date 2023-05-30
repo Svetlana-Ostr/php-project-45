@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 //Проверка числа на четность
-function isEven(int $value) : bool
+function isEven(int $value): bool
 {
     return ($value % 2 == 0);
 }
