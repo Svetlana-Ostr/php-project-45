@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 //Проверка простое ли число
-function isPrime($value)
+function isPrime(int $value)
 {
     $num = $value;
     $flag = true;
