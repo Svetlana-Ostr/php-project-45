@@ -12,4 +12,5 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Games\LogicCalc\runCalc;
-runCalc();
+use function BrainGames\Engine\runGame;
+runGame('What is the result of the expression?', runCalc());
