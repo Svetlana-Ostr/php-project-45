@@ -5,23 +5,23 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function runGame(string $line, $callback) {
-
+function runGame(callable $run) {
+   
     //Приветствие
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line("%s", $line) ;
+    //line("%s", $line) ;
     
     //Вопрос-ответ
    
     for($i = 1; $i < 3; $i++){
-        $arrayLogic = call_user_func($callback);
-        line("Question: %s" , $arrayLogic['question']);
+        [$question, $correctAnswer] = $run(); 
+        line("Question: %s" , $question);
         $playerAnswer = prompt('Your answer');
-        if ($playerAnswer != $arrayLogic['correctAnswer']) {
+        if ($playerAnswer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.",
-            $playerAnswer, $arrayLogic['correctAnswer']);
+            $playerAnswer, $correctAnswer);
             line("Let's try again, %s", $name);
            break;
         } else {
