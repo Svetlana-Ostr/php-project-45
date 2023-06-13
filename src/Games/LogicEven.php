@@ -15,7 +15,7 @@ function runEven()
     $getData = function () {
         $num = random_int(0, 10) ;
         $question = "{$num}" ;
-        isEven($question) ? $answer = 'yes' : $answer = 'no';
+        isEven($num) ? $answer = 'yes' : $answer = 'no';
         return [
             $question ,
             $answer

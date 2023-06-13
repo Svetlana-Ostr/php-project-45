@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function runGame($line, callable $run)
+function runGame(string $line, callable $run)
 {
     //Приветствие
     line('Welcome to the Brain Games!');

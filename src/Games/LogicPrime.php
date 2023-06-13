@@ -25,7 +25,7 @@ function runPrime()
     $getData = function () {
         $num = random_int(1, 10) ;
         $question = "{$num}" ;
-        isPrime($question) ? $answer = 'yes' : $answer = 'no';
+        isPrime($num) ? $answer = 'yes' : $answer = 'no';
         return [
             $question ,
             $answer
