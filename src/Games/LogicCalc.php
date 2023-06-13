@@ -6,6 +6,7 @@ use function BrainGames\Engine\runGame;
 
 function calculate(int $num1, int $num2, string $operator): int
 {
+    $correctAnswer = 0 ;
     if ($operator == '+') {
         $correctAnswer = $num1 + $num2 ;
     } elseif ($operator == '-') {
