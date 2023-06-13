@@ -18,8 +18,8 @@ function runGame($line, callable $run)
         line("Question: %s", $q);
         $plAnsw = readline("Your answer: ");
         if ($plAnsw != $corAnsw) {
-            line("'{$plAnsw}' is wrong answer ;(. Correct answer was '%s'.", $corAnsw);
-            line("Let's try again, %s!", $name);
+            line("'{$plAnsw}' is wrong answer ;(. Correct answer was '{$corAnsw}'.");
+            line("Let's try again, {$name}!");
             break ;
         } else {
             line("Correct!");
