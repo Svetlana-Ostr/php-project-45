@@ -16,10 +16,10 @@ function runGame($line, callable $run)
     for ($i = 1; $i <= 3; $i++) {
         [$q, $corAnsw] = $run() ;
         line("Question: %s", $q);
-        $playerAnswer = prompt('Your answer');
-        if ($playerAnswer != $corAnsw) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $playerAnswer, $corAnsw);
-            line("Let's try again, %s", $name);
+        $plAnsw = prompt('Your answer');
+        if ($plAnsw != $corAnsw) {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $plAnsw, $corAnsw);
+            line("Let's try again, %s!", $name);
             break;
         } else {
             line("Correct!");
