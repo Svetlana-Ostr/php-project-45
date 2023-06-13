@@ -33,4 +33,3 @@ function runPrime()
     } ;
     runGame($condition, $getData) ;
 }
-
