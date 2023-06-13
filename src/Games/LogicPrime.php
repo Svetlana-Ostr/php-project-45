@@ -2,7 +2,39 @@
 
 namespace BrainGames\Games\LogicPrime;
 
-use function cli\line;
+use function BrainGames\Engine\runGame;
+
+//Проверка простое ли число
+function isPrime(int $value)
+{
+    $num = $value;
+    $flag = true;
+    for ($i = 2; $i < $num; $i++) {
+        if ($num % $i === 0) {
+            $flag = false;
+            break;
+        }
+    }
+
+    return $flag ;
+}
+
+function runPrime()
+{
+    $condition = 'Answer "yes" if given number is prime. Otherwise answer "no".' ;
+    $getData = function () {
+        $num = random_int(0, 10) ;
+        $question = "{$num}" ;
+        isPrime($question) ? $answer = 'yes' : $answer = 'no';
+        return [
+            $question ,
+            $answer
+        ] ;
+    } ;
+    runGame($condition, $getData) ;
+}
+
+/*use function cli\line;
 use function cli\prompt;
 
 //Проверка простое ли число
@@ -13,7 +45,7 @@ function isPrime(int $value)
     for ($i = 2; $i < $num; $i++) {
         if ($num % $i === 0) {
             $flag = false;
-            break; // выйдем из цикла
+            break;
         }
     }
 
@@ -51,3 +83,4 @@ function runPrime()
         }
     }
 }
+*/
