@@ -25,7 +25,7 @@ function runGame($line, callable $run)
             line("Correct!");
             if ($i >= 3) {
                 line("Congratulations, %s!", $name);
-            }       
+            } 
         }
     }
 }
