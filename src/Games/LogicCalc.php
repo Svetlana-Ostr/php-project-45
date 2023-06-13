@@ -4,7 +4,7 @@ namespace BrainGames\Games\LogicCalc;
 
 use function BrainGames\Engine\runGame;
 
-function calculate(int $num1, int $num2, string $operator) :int
+function calculate(int $num1, int $num2, string $operator): int
 {
     if ($operator == '+') {
         $correctAnswer = $num1 + $num2 ;
