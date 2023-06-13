@@ -12,20 +12,20 @@ function runGame($line, callable $run)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line("%s", $line) ;
-    //Вопрос-ответ
+        //Вопрос-ответ
     for ($i = 1; $i <= 3; $i++) {
         [$q, $corAnsw] = $run() ;
         line("Question: %s", $q);
-        $plAnsw = prompt('Your answer');
+        $plAnsw = readline("Your answer: ");
         if ($plAnsw != $corAnsw) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $plAnsw, $corAnsw);
+            line("'{$plAnsw}' is wrong answer ;(. Correct answer was '%s'.", $corAnsw);
             line("Let's try again, %s!", $name);
-            break;
+            break ;
         } else {
             line("Correct!");
             if ($i >= 3) {
                 line("Congratulations, %s!", $name);
-            }
+            }       
         }
     }
 }
