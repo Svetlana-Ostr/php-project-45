@@ -6,93 +6,34 @@ use function BrainGames\Engine\runGame;
 
 function calculateProgression()
 {
-    $begin = mt_rand(0, 10) ;
-    $difference = mt_rand(0, 10) ;
-    $array = [] ;
-    $a = $begin ;
-    $d = $difference ;
-    $array[0] = $a ;
+    $begin = mt_rand(0, 10);
+    $difference = mt_rand(0, 10);
+    $array = [];
+    $progressionMember = $begin;
+    $array[0] = $progressionMember;
 
     for ($i = 1; $i <= 10; $i++) {
-        $a = $a + $d ;
-        $array[$i] = $a ;
+        $progressionMember = $progressionMember + $difference;
+        $array[$i] = $progressionMember;
     }
-    return($array) ;
+    return($array);
 }
 
 function runProgression()
 {
-    $condition = 'What number is missing in the progression?' ;
+    $condition = 'What number is missing in the progression?';
     $getData = function () {
-        $newArray = calculateProgression() ;
-        $hidden = mt_rand(0, 10) ;
-        $i = $hidden ;
-        $answer = $newArray[$i] ;
-        $newArray[$i] = '..' ;
-        $question = implode(' ', $newArray) ;
+        $newArray = calculateProgression();
+        $hidden = mt_rand(0, 10);
+        $i = $hidden;
+        $answer = $newArray[$i];
+        $newArray[$i] = '..';
+        $question = implode(' ', $newArray);
         $correctAnswer = $answer;
         return [
             $question ,
             $correctAnswer
-        ] ;
-    } ;
-    runGame($condition, $getData) ;
+        ];
+    };
+    runGame($condition, $getData);
 }
-/*
-use function cli\line;
-use function cli\prompt;
-
-function &calculateProgression()
-{
-    $begin = mt_rand(0, 10) ;
-    $difference = mt_rand(0, 10) ;
-    $array = [] ;
-    $a = $begin ;
-    $d = $difference ;
-    $array[0] = $a ;
-
-    for ($i = 1; $i <= 10; $i++) {
-        $a = $a + $d ;
-        $array[$i] = $a ;
-    }
-
-//print_r($array) ;
-    return($array) ;
-}
-
-function runProgression()
-{
-    //Приветствие
-
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line('What number is missing in the progression?');
-
-    //Вопрос-ответ
-    $j = 1 ;
-    $stepToVin = 3 ;
-    while ($j <= $stepToVin) {
-        $newArray =& calculateProgression() ;
-        $hidden = mt_rand(0, 10) ;
-        $i = $hidden ;
-        $answer = $newArray[$i] ;
-        $newArray[$i] = '..' ;
-        $string = implode(' ', $newArray) ;
-        $correctAnswer = $answer;
-       // $question = $string ;
-        line("Question: %s", $string);
-        $playerAnswer = prompt('Your answer');
-        if ($playerAnswer != $correctAnswer) {
-            echo "{$playerAnswer} is wrong answer ;(. Correct answer was '{$correctAnswer}'" . PHP_EOL ;
-            echo "Let's try again, {$name}!" . PHP_EOL ;
-            break;
-        }
-        line("Correct!");
-        $j++;
-        if ($i > $stepToVin) {
-            line("Congratulations, %s!", $name) ;
-        }
-    }
-}
-*/
