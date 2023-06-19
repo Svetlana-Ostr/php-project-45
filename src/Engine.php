@@ -21,12 +21,12 @@ function runGame(string $line, callable $run)
         if ($playAnsw != $correctAnsw) {
             line("'{$playAnsw}' is wrong answer ;(. Correct answer was '{$correctAnsw}'.");
             line("Let's try again, {$name}!");
-            break ;
+            break;
         } else {
-            line("Correct!");
+            line("Correct!");            
         }
-    }
-    if ($i >= STEPSTOWIN) {
-        line("Congratulations, %s!", $name);
+        if ($i == STEPSTOWIN) {
+            line("Congratulations, %s!", $name);
+        }
     }
 }
