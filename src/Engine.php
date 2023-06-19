@@ -23,7 +23,7 @@ function runGame(string $line, callable $run)
             line("Let's try again, {$name}!");
             break;
         } else {
-            line("Correct!");            
+            line("Correct!");
         }
         if ($i == STEPSTOWIN) {
             line("Congratulations, %s!", $name);
