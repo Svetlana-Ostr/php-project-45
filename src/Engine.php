@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const STEPSTOWIN = 3;
+const STEPS_TO_WIN = 3;
 
 function runGame(string $line, callable $run)
 {
@@ -14,19 +14,18 @@ function runGame(string $line, callable $run)
     line("Hello, %s!", $name);
     line("%s", $line) ;
 
-    for ($i = 1; $i <= STEPSTOWIN; $i++) {
-        [$question, $correctAnsw] = $run() ;
+    for ($i = 1; $i <= STEPS_TO_WIN; $i++) {
+        [$question, $correctAnswer] = $run() ;
         line("Question: %s", $question);
-        $playAnsw = readline("Your answer: ");
-        if ($playAnsw != $correctAnsw) {
-            line("'{$playAnsw}' is wrong answer ;(. Correct answer was '{$correctAnsw}'.");
+        $playAnswer = prompt("Your answer: ");
+        if ($playAnswer != $correctAnswer) {
+            line("'{$playAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$name}!");
-            break;
-        } else {
+            return;
+        }
+        if ($playAnswer == $correctAnswer) {
             line("Correct!");
         }
-        if ($i == STEPSTOWIN) {
-            line("Congratulations, %s!", $name);
-        }
     }
+    line("Congratulations, %s!", $name);
 }

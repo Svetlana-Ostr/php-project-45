@@ -4,19 +4,17 @@ namespace BrainGames\Games\LogicProgression;
 
 use function BrainGames\Engine\runGame;
 
+const ROW_LENGHT = 10;
+
 function calculateProgression()
 {
-    $begin = mt_rand(0, 10);
-    $difference = mt_rand(0, 10);
-    $array = [];
-    $progressionMember = $begin;
-    $array[0] = $progressionMember;
-
-    for ($i = 1; $i <= 10; $i++) {
-        $progressionMember = $progressionMember + $difference;
-        $array[$i] = $progressionMember;
+    $begin = random_int(0, ROW_LENGHT);
+    $difference = random_int(0, ROW_LENGHT);
+    $progressionArray = [];
+    for ($i = 0; $i <= ROW_LENGHT - 1; $i++) {
+        $progressionArray[$i] = $begin + $i * $difference;
     }
-    return($array);
+    return($progressionArray);
 }
 
 function runProgression()
@@ -24,7 +22,7 @@ function runProgression()
     $condition = 'What number is missing in the progression?';
     $getData = function () {
         $newArray = calculateProgression();
-        $hidden = mt_rand(0, 10);
+        $hidden = random_int(0, ROW_LENGHT - 1);
         $i = $hidden;
         $answer = $newArray[$i];
         $newArray[$i] = '..';

@@ -4,9 +4,8 @@ namespace BrainGames\Games\LogicPrime;
 
 use function BrainGames\Engine\runGame;
 
-function isPrime(int $value): bool
+function isPrime(int $num): bool
 {
-    $num = $value;
     if ($num < 2) {
         return false;
     }
