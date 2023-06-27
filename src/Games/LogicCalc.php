@@ -4,6 +4,8 @@ namespace BrainGames\Games\LogicCalc;
 
 use function BrainGames\Engine\runGame;
 
+const CONDITION = 'What is the result of the expression?';
+
 function calculate(int $num1, int $num2, string $operator): mixed
 {
     return match ($operator) {
@@ -14,9 +16,8 @@ function calculate(int $num1, int $num2, string $operator): mixed
     };
 }
 
-function runCalc()
+function run()
 {
-    $condition = 'What is the result of the expression?';
     $getData = function () {
         $num1 = random_int(0, 10);
         $num2 = random_int(0, 10);
@@ -30,5 +31,5 @@ function runCalc()
             $answer
         ] ;
     } ;
-    runGame($condition, $getData);
+    runGame(CONDITION, $getData);
 }

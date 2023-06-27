@@ -23,9 +23,6 @@ function runGame(string $line, callable $run)
             line("Let's try again, {$name}!");
             return;
         }
-        if ($playAnswer == $correctAnswer) {
-            line("Correct!");
-        }
-    }
-    line("Congratulations, %s!", $name);
+          line("Correct!");
+    }line("Congratulations, %s!", $name);
 }
