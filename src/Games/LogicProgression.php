@@ -31,6 +31,5 @@ function run()
             $correctAnswer
         ];
     };
-
     runGame(CONDITION, $getData);
 }

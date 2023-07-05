@@ -30,6 +30,5 @@ function run()
             $answer
         ];
     };
-
     runGame(CONDITION, $getData);
 }

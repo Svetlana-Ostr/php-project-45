@@ -21,16 +21,15 @@ function run()
     $getData = function () {
         $num1 = random_int(0, 10);
         $num2 = random_int(0, 10);
-        $supportedOperators = [ 'plus' => '+' , 'minus' => '-' , 'multiply' => '*' ];
+        $supportedOperators = ['plus' => '+', 'minus' => '-', 'multiply' => '*'];
         $key = array_rand($supportedOperators);
         $operator = $supportedOperators[$key];
         $question = "{$num1} {$operator} {$num2}";
         $answer = calculate($num1, $num2, $operator);
         return [
-            $question ,
+            $question,
             $answer
         ];
-    }; 
-
+    };
     runGame(CONDITION, $getData);
 }
