@@ -4,7 +4,7 @@ namespace BrainGames\Games\LogicEven;
 
 use function BrainGames\Engine\runGame;
 
-const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".' ;
+const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $value): bool
 {
@@ -19,9 +19,10 @@ function run()
         $answer = isEven($num) ? 'yes' : 'no';
 
         return [
-            $question ,
+            $question,
             $answer
-        ] ;
-    } ;
+        ];
+    };
+    
     runGame(CONDITION, $getData);
 }

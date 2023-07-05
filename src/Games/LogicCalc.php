@@ -29,7 +29,8 @@ function run()
         return [
             $question ,
             $answer
-        ] ;
-    } ;
+        ];
+    }; 
+
     runGame(CONDITION, $getData);
 }

@@ -27,9 +27,10 @@ function run()
         $runProgression[$hidden] = '..';
         $question = implode(' ', $runProgression);
         return [
-            $question ,
+            $question,
             $correctAnswer
         ];
     };
+
     runGame(CONDITION, $getData);
 }

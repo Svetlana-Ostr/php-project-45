@@ -12,10 +12,10 @@ function runGame(string $line, callable $run)
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line("%s", $line) ;
+    line("%s", $line);
 
     for ($i = 1; $i <= STEPS_TO_WIN; $i++) {
-        [$question, $correctAnswer] = $run() ;
+        [$question, $correctAnswer] = $run();
         line("Question: %s", $question);
         $playAnswer = prompt("Your answer: ");
         if ($playAnswer != $correctAnswer) {
@@ -23,6 +23,7 @@ function runGame(string $line, callable $run)
             line("Let's try again, {$name}!");
             return;
         }
-          line("Correct!");
-    }line("Congratulations, %s!", $name);
+        line("Correct!");
+    }
+    line("Congratulations, %s!", $name);
 }
