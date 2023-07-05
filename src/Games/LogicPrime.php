@@ -8,11 +8,11 @@ const CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".
 
 function isPrime(int $num): bool
 {
-    if ($num < 2) {
+    if ($num == 1) {
         return false;
     }
 
-    if ($num = 2) {
+    if ($num == 2) {
         return true;
     }
 
